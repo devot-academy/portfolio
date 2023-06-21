@@ -1,8 +1,7 @@
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from '@/global';
 import { selectTheme } from '@/global/theme'
-import Navbar from '@/components/organisms/Navbar';
-import HomeTemplate from '@/components/templates/home';
+import HomeTemplate from '@/Components/templates/home';
 
 export default function Home() {
   const theme = selectTheme({
