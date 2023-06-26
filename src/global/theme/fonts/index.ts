@@ -7,7 +7,7 @@ export const FONTS: FontFormat = {
     font-weight: 100;
     font-family: 'Montserrat';
   `,
-  LIGHT: css`
+  NORMAL: css`
     font-weight: 300;
     font-family: 'Montserrat';
   `,
