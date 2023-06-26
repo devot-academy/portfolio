@@ -29,6 +29,7 @@ export const typeMapper = {
             ${FONTS.NORMAL}
             font-size: 4.8rem;
             line-height: 7.6rem;
+            letter-spacing: 0rem;
         
         `
     },
@@ -48,6 +49,7 @@ export const typeMapper = {
             ${FONTS.NORMAL}
             font-size: 2.4rem;
             line-height: 3.6rem;
+            letter-spacing: 0rem;
         
         `
     },
@@ -61,7 +63,7 @@ export const typeMapper = {
         
         `
     },
-    'Subtitle 1': {
+    'Subtitle-1': {
         as: 'p',
         textFormat: css`
             ${FONTS.NORMAL}
@@ -71,7 +73,7 @@ export const typeMapper = {
         
         `
     },
-    'Subtitle 2': {
+    'Subtitle-2': {
         as: 'p',
         textFormat: css`
             ${FONTS.NORMAL}
@@ -81,22 +83,23 @@ export const typeMapper = {
         
         `
     },
-    'Body 1': {
+    'Body-1': {
         as: 'p',
         textFormat: css`
             ${FONTS.NORMAL}
             font-size: 1.8rem;
             line-height: 2.8rem;
-
+            letter-spacing: 0.05rem;
         
         `
     },
-    'Body 2': {
+    'Body-2': {
         as: 'p',
         textFormat: css`
             ${FONTS.NORMAL}
             font-size: 1.6rem;
             line-height: 2.4rem;
+            letter-spacing: 0.025rem;
         
         `
     },
@@ -106,7 +109,29 @@ export const typeMapper = {
             ${FONTS.NORMAL}
             font-size: 1.8rem;
             line-height: 2.8rem;
-        
+            text-transform: uppercase;
+            letter-spacing: 0.125rem;
+        `
+    },
+
+    'caption': {
+        as: 'span',
+        textFormat: css`
+            ${FONTS.NORMAL}
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            letter-spacing: 0.04rem;
+        `
+    },
+
+    'OVERLINE': {
+        as: 'span',
+        textFormat: css`
+            ${FONTS.NORMAL}
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            letter-spacing: 0.15rem;
+            
         `
     },
 }
