@@ -1,7 +1,21 @@
 import styled from 'styled-components';
 
-import { LinkInterface } from "./interfaces"; 
+import Text from '@/components/atoms/text';
 
-export const LinkComponent = styled.a.attrs(({ url }:LinkInterface)=>({
-    href: url
-}))<LinkInterface>``;
+import { ILink } from "."; 
+
+export const LinkComponent = styled.a.attrs(({ url, isLinkedInAnotherPage }: ILink)=>({
+    href: url,
+    target: isLinkedInAnotherPage ? '_blank' : '_self',
+}))<{ url: string; isLinkedInAnotherPage: boolean; }>`
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+        color: ${({ theme }) => theme.COLORS.LABEL}
+    }
+`;
+
+export const TextComponet = styled(Text).attrs({ 
+    color: 'LABEL',
+})``;
+

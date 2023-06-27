@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components'
 import { FONTS } from '@/global/theme/fonts'
 import { COLORS } from '@/global/theme/colors'
-import { TextInterface } from './interfaces'
+
+import { TextInterface } from '.'
 
 
 export const typeMapper = {
