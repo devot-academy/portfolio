@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 import * as Style from './styles';
 
-import { TextInterface } from './interfaces';
+import { typeMapper } from './styles';
+import { ColorFormat } from '@/global/theme/colors/interfaces';
 
-export default function Text (props: TextInterface) {
+export interface IText {
+    type: keyof typeof typeMapper;
+    color?: keyof ColorFormat;
+    children: ReactNode;
+}
+
+export default function Text (props: IText) {
     return <Style.TextComponent {...props} />
 }

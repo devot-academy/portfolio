@@ -6,6 +6,8 @@ export interface ColorFormat {
     PRIMARY_LIGHT: string;
     PRIMARY: string;
     PRIMARY_DARK: string;
+
+    LABEL: string;
     
     ERROR: string;
     BACKGROUND: string;
