@@ -1,9 +1,7 @@
 import styled, { css } from 'styled-components'
 import { FONTS } from '@/global/theme/fonts'
 import { COLORS } from '@/global/theme/colors'
-
-import { TextInterface } from '.'
-
+import { IText } from './index'
 
 export const typeMapper = {
     'headline-1': {
@@ -137,9 +135,9 @@ export const typeMapper = {
     },
 }
 
-export const TextComponent = styled.span.attrs(({ type }: TextInterface) => ({
+export const TextComponent = styled.span.attrs(({ type }: IText) => ({
     as: typeMapper[type]?.as,
-}))<TextInterface>`
+})) <IText>`
     ${({ type }) => typeMapper[type]?.textFormat}
-    color: ${({ color }) => color!== undefined ? COLORS[color] : COLORS.PRIMARY_LIGHT }
+    color: ${({ color }) => color !== undefined ? COLORS[color] : COLORS.PRIMARY_LIGHT}
 `;

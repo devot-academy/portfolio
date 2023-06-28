@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { IconInterface } from './interfaces';
+import { IconInterface } from './index';
 
 export const IconSize = {
   small: '1rem',

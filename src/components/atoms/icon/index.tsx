@@ -1,7 +1,13 @@
 import { IconType } from 'react-icons';
-import { IconInterface } from './interfaces';
 import { StyledIcon } from './styles';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
+import { IconSize, IconColor } from "./styles";
+
+export interface IconInterface {
+  name: string;
+  size: keyof typeof IconSize;
+  color: keyof typeof IconColor;
+}
 
 const icons: { [key: string]: IconType } = {
   email: FaEnvelope,

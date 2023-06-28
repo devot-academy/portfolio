@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
-
-import { ImageInterface } from './interfaces';
+import { ImageInterface } from './index';
 
 const colors = {
     PRIMARY: '#3C8267',
@@ -28,6 +27,4 @@ export const ImageComponent = styled.img<ImageInterface>`
         border: 10px solid ${hasBorderColor && colors[hasBorderColor]};
         padding: 15px;    
     `}
-
-}
-`
+`;

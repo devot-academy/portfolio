@@ -1,5 +1,4 @@
 import React, { ReactNode } from 'react';
-
 import * as Style from './styles';
 
 import { typeMapper } from './styles';
@@ -11,6 +10,6 @@ export interface IText {
     children: ReactNode;
 }
 
-export default function Text (props: IText) {
+export default function Text(props: IText) {
     return <Style.TextComponent {...props} />
 }

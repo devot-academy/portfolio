@@ -1,9 +1,7 @@
 import styled, { css } from 'styled-components';
-
 import Text from '@/components/atoms/Text';
 import Icon from '@/components/atoms/icon';
-
-import { ButtonInterface } from './interfaces';
+import { ButtonInterface } from './index';
 
 const sizeMapper = {
   small: css`
@@ -26,12 +24,12 @@ export const ButtonComponent = styled.button<ButtonInterface>`
   background-color: ${({ theme, backgroundColor }) => {
     if (backgroundColor === undefined)
       return theme.COLORS.ACCENTED;
-    else if (backgroundColor === 'tranparent' )
+    else if (backgroundColor === 'tranparent')
       return css`transparent`;
-    else 
-       return theme.COLORS[backgroundColor]
+    else
+      return theme.COLORS[backgroundColor]
   }};
-  color: ${({ theme })=> theme.COLORS.PRIMARY_LIGHT };
+  color: ${({ theme }) => theme.COLORS.PRIMARY_LIGHT};
   border: none;
   box-shadow: 0 0.125rem 0.313rem rgba(0, 0, 0, 0.2);
   cursor: pointer;
@@ -39,7 +37,7 @@ export const ButtonComponent = styled.button<ButtonInterface>`
   transition: 0.3s;
 
   &:hover {
-    background-color: ${({ theme })=> theme.COLORS.ACCENTED };
+    background-color: ${({ theme }) => theme.COLORS.ACCENTED};
     filter: brightness(90%);
   }
 `;

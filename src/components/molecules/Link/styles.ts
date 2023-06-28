@@ -1,13 +1,11 @@
 import styled from 'styled-components';
+import Text from '@/components/atoms/Text';
+import { ILink } from ".";
 
-import Text from '@/components/atoms/text';
-
-import { ILink } from "."; 
-
-export const LinkComponent = styled.a.attrs(({ url, isLinkedInAnotherPage }: ILink)=>({
+export const LinkComponent = styled.a.attrs(({ url, isLinkedInAnotherPage }: ILink) => ({
     href: url,
     target: isLinkedInAnotherPage ? '_blank' : '_self',
-}))<{ url: string; isLinkedInAnotherPage: boolean; }>`
+})) <{ url: string; isLinkedInAnotherPage: boolean; }>`
     text-decoration: none;
     &:hover {
         text-decoration: underline;
@@ -15,7 +13,7 @@ export const LinkComponent = styled.a.attrs(({ url, isLinkedInAnotherPage }: ILi
     }
 `;
 
-export const TextComponet = styled(Text).attrs({ 
+export const TextComponet = styled(Text).attrs({
     color: 'LABEL',
 })``;
 

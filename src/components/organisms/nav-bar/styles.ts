@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-
-
 import ButtonComponent from '@/components/molecules/button';
 
 export const Container = styled.div`

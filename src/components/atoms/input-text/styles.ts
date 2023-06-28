@@ -1,12 +1,9 @@
-
-import styled, {css} from 'styled-components';
-
-import { InputTextInterface } from './interfaces';
-
+import styled, { css } from 'styled-components';
+import { InputTextInterface } from './index';
 
 export const InputTextComponent = styled.input.attrs(({ type }: InputTextInterface) => ({
-    type,
-}))<InputTextInterface> `
+  type,
+})) <InputTextInterface> `
 
     font-size: 15px;
     padding: 0.75rem 1.5rem;
@@ -17,12 +14,12 @@ export const InputTextComponent = styled.input.attrs(({ type }: InputTextInterfa
     background-color: ${({ theme, backgroundColor }) => {
     if (backgroundColor === undefined)
       return theme.COLORS.ACCENTED;
-    else if (backgroundColor === 'tranparent' )
+    else if (backgroundColor === 'tranparent')
       return css`transparent`;
-    else 
-       return theme.COLORS[backgroundColor]
+    else
+      return theme.COLORS[backgroundColor]
   }};
-  color: ${({ theme })=> theme.COLORS.PRIMARY_LIGHT };
+  color: ${({ theme }) => theme.COLORS.PRIMARY_LIGHT};
   border: none;
   box-shadow: 0 0.125rem 0.313rem rgba(0, 0, 0, 0.2);
   cursor: pointer;

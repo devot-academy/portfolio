@@ -1,6 +1,14 @@
 import React from 'react';
 import * as Style from './styles';
-import { HomeInterface } from './interfaces';
+import { ImageInterface } from "@/components/atoms/Image/index";
+import { IText } from "@/components/atoms/Text/index";
+import { ButtonInterface } from "@/components/molecules/button/index";
+
+export interface HomeInterface {
+  ButtonProps?: ButtonInterface;
+  ImageProps?: ImageInterface;
+  TextProps?: IText
+}
 
 export default function HomeTemplate(props: HomeInterface) {
   return (
