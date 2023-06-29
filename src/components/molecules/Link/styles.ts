@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import Text from '@/components/atoms/text';
+import Text from '@/components/atoms/Text';
 
 import { ILink } from "."; 
 
