@@ -3,7 +3,7 @@ import { StyledIcon } from './styles';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 import { IconSize, IconColor } from "./styles";
 
-export interface IconInterface {
+export interface IIcon {
   name: string;
   size: keyof typeof IconSize;
   color: keyof typeof IconColor;
@@ -18,7 +18,7 @@ const icons: { [key: string]: IconType } = {
   instagram: FaInstagram
 };
 
-const Icon = ({ name, ...props }: IconInterface) => {
+const Icon = ({ name, ...props }: IIcon) => {
   const Icon = icons[name];
 
   if (!Icon) return null;

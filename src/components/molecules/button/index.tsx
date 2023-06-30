@@ -1,17 +1,17 @@
 import * as Style from './styles';
 import { ColorFormat } from '@/global/theme/colors/interfaces';
-import { IconInterface } from '../../atoms/icon/index'
+import { IIcon } from '../../atoms/icon/index'
 
-export interface ButtonInterface {
+export interface IButton {
   size?: 'small' | 'medium' | 'large';
   backgroundColor?: keyof ColorFormat | 'tranparent';
   onClick: () => void;
   isDisabled?: boolean;
   label?: string;
-  IconProps?: IconInterface;
+  IconProps?: IIcon;
 }
 
-export default function Button(props: ButtonInterface) {
+export default function Button(props: IButton) {
   const { label, IconProps } = props;
   return (
     <Style.ButtonComponent {...props}>

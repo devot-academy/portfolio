@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
-import Text from '@/components/atoms/Text';
+import Text from '@/components/atoms/text';
 import Icon from '@/components/atoms/icon';
-import { ButtonInterface } from './index';
+import { IButton } from '.';
 
 const sizeMapper = {
   small: css`
@@ -15,7 +15,7 @@ const sizeMapper = {
   `,
 }
 
-export const ButtonComponent = styled.button<ButtonInterface>`
+export const ButtonComponent = styled.button<IButton>`
   display: flex;
   align-items: center;
   padding: 0.75rem 1.5rem;

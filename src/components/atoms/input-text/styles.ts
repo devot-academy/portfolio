@@ -1,9 +1,9 @@
 import styled, { css } from 'styled-components';
-import { InputTextInterface } from './index';
+import { IInputText } from '.';
 
-export const InputTextComponent = styled.input.attrs(({ type }: InputTextInterface) => ({
+export const InputTextComponent = styled.input.attrs(({ type }: IInputText) => ({
   type,
-})) <InputTextInterface> `
+})) <IInputText> `
 
     font-size: 15px;
     padding: 0.75rem 1.5rem;

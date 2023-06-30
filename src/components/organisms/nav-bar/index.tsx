@@ -1,12 +1,12 @@
 import React from 'react';
 import * as Style from './styles';
-import { ButtonInterface } from '../../molecules/button/index'
+import { IButton } from '../../molecules/button/index'
 
 export interface NavbarInterface {
-    AboutButtonProps: ButtonInterface;
-    ProjectButtonProps: ButtonInterface;
-    ContactButtonProps: ButtonInterface;
-    ResumeButtonProps: ButtonInterface;
+    AboutButtonProps: IButton;
+    ProjectButtonProps: IButton;
+    ContactButtonProps: IButton;
+    ResumeButtonProps: IButton;
 }
 
 export default function Navbar(props: NavbarInterface) {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { ImageComponent } from './styles'
 
-export interface ImageInterface {
+export interface IImage {
     src: string;
     alt: string;
     size?: 'small' | 'medium' | 'large';
@@ -9,7 +9,7 @@ export interface ImageInterface {
     hasBorderColor?: 'PRIMARY' | 'SECONDARY';
 }
 
-function Image(props: ImageInterface) {
+function Image(props: IImage) {
     return <ImageComponent {...props} />
 }
 

@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import * as Style from './styles'
-import { IText } from '@/components/atoms/Text'
+import { IText } from '@/components/atoms/text'
 
 export interface ILink {
     url: string;

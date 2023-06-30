@@ -1,16 +1,16 @@
 import React from 'react';
 import * as Style from './styles';
-import { ImageInterface } from "@/components/atoms/Image/index";
-import { IText } from "@/components/atoms/Text/index";
-import { ButtonInterface } from "@/components/molecules/button/index";
+import { IImage } from "@/components/atoms/image/index";
+import { IText } from "@/components/atoms/text/index";
+import { IButton } from "@/components/molecules/button/index";
 
-export interface HomeInterface {
-  ButtonProps?: ButtonInterface;
-  ImageProps?: ImageInterface;
+export interface IHome {
+  ButtonProps?: IButton;
+  ImageProps?: IImage;
   TextProps?: IText
 }
 
-export default function HomeTemplate(props: HomeInterface) {
+export default function HomeTemplate(props: IHome) {
   return (
     <Style.Container>
       <Style.Logo />

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Text from '@/components/atoms/Text';
+import Text from '@/components/atoms/text';
 import { ILink } from ".";
 
 export const LinkComponent = styled.a.attrs(({ url, isLinkedInAnotherPage }: ILink) => ({

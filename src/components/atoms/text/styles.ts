@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import { FONTS } from '@/global/theme/fonts'
 import { COLORS } from '@/global/theme/colors'
-import { IText } from './index'
+import { IText } from '.'
 
 export const typeMapper = {
     'headline-1': {

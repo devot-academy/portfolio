@@ -1,12 +1,12 @@
 import styled, { css } from 'styled-components';
-import { ImageInterface } from './index';
+import { IImage } from '.';
 
 const colors = {
     PRIMARY: '#3C8267',
     SECONDARY: 'pink'
 }
 
-export const ImageComponent = styled.img<ImageInterface>`
+export const ImageComponent = styled.img<IImage>`
     width: ${({ size }) => {
         if (size === 'small') return 40;
         if (size === 'medium') return 80;
