@@ -1,53 +1,52 @@
 import styled from 'styled-components';
+import Text from '@/components/atoms/Text';
 
 export const Container = styled.div`
-
-  background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
+ 
+  background-color: ${({ theme }) => theme.COLORS.NETRAL};
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`;
+  padding: 2rem;
 
-export const Logo = styled.div``;
-
-export const Navbar = styled.nav``;
-
-export const Main = styled.main``;
-
-export const TextComponent = styled.p`
-
-  background-color: gray;
-
- &.headline-5 {
-  color: white;
-  font-size: 2.4rem;
-  font-weight: 40rem;
-  line-height: 3.6rem;
-}
-
-  &.headline-1 {
-  color: black;
-  font-size: 9.6rem;
-  font-weight: 30rem;
-  line-height: 7.6rem;
-  letter-spacing: -0.15rem;
-
-}
-
-  &.headline-6 {
-  font-size: 2rem;
-  font-weight: 40rem;
-  line-height: 2.8rem;
-  letter-spacing: 0.015rem;
-}
+  
 `;
 
 
-export const ImageComponent = styled.img``;
+export const container = styled(Text)`
+  width: 60vh;
+  height: 60vh;
 
-export const ButtonComponent = styled.button``;
+`;
+export const MessageContainer = styled(Text)`
+  
+`;
 
-export const SocialMedia = styled.div``;
+
+export const presentation = styled(Text)`
+
+`;
+
+
+export const message = styled(Text)`
+  color: ${({ theme }) => theme.COLORS.BACKGROUND};
+ 
+
+
+`;
+
+export const text = styled(Text)`
+
+
+
+`;
+export const Message = styled(Text)`
+  color: ${({ theme }) => theme.COLORS.BACKGROUND};
+`;
+
+
+
+

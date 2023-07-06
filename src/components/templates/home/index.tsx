@@ -1,31 +1,32 @@
 import React from 'react';
 import * as Style from './styles';
-import { HomeInterface } from './interfaces';
-import { TextComponent } from '../../molecules/button/styles';
+import Home from '../../../pages/index';
+import Text from '@/components/atoms/Text';
 
-export default function HomeTemplate(props: HomeInterface) {
+
+
+interface Home {
+  presentation: string;
+  message: string;
+  text: string;
+}
+
+export default function HomeTemplate({presentation, message, text }: Home){
   return (
     <Style.Container>
-      <Style.Logo />
-      <Style.Navbar />
-      <Style.Main />
-      <TextComponent  type='headline-5'>
-       Eu sou Raissa Marques,
-       <TextComponent  type='headline-1'>
-        REACT <br /> DEVELOP
-       <TextComponent type='headline-6'>
-       Tenho 24 anos e sou formada em pedagogia. <br /> Realizando,  
-       transição para  a area de programação. <br /> Ganhei  experiência em trabalho 
-       em equipe nos ultimos 6 meses <br />e estou determinada a me destacar nesse novo
-       campo.
-
-       </TextComponent>
-
-       </TextComponent>
-       
-
-      </TextComponent>
-      
+     
+     <Style.Container>
+      <Style.presentation type='headline-6'>
+        {presentation}
+     </Style.presentation>
+      <Style.message type='headline-1'>
+        {message}
+      </Style.message>
+      <Style.text type='headline-5'>
+        {text}
+      </Style.text>
+     </Style.Container>
+    
     </Style.Container>
   );
 };
