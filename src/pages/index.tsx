@@ -1,7 +1,7 @@
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from '@/global';
 import { selectTheme } from '@/global/theme'
-import Link from '@/components/molecules/link';
+import HomeTemplate from '@/components/templates/home';
 
 export default function Home() {
   const theme = selectTheme({
@@ -10,8 +10,12 @@ export default function Home() {
   });
   return (
     <ThemeProvider theme={theme}>
-     <Link type='headline-2' url='http://www.google.com' isLinkedInAnotherPage={false}>Click</Link>
-      <GlobalStyles /> 
+      <HomeTemplate
+        presentation="Oi! Meu nome é Allan"
+        main="REACT DEVELOPER"
+        summary="Tenho 28 anos e nos últimos 12 meses mergulhei de cabeça no mundo do desenvolvimento. Também acumulei valiosa experiência trabalhando em equipe."
+      />
+      <GlobalStyles />
     </ThemeProvider>
   )
 }
