@@ -13,7 +13,7 @@ export interface IHome {
 }
 
 export default function HomeTemplate(props: IHome) {
-  const { logo, line, image, button, link, presentation, main, summary } = props;
+  const { button, presentation, main, summary } = props;
 
   return (
     <Style.Container>

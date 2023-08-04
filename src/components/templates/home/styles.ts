@@ -22,6 +22,7 @@ export const Logo = styled.div`
   margin-right: 33.938rem;
   width: 16.438rem;
   height: 7.063rem;
+  padding: 7.06rem 16.4rem;
   flex-shrink: 0;
   border: 1px solid red;
 `;
@@ -29,6 +30,7 @@ export const Logo = styled.div`
 export const Link = styled.div`
   width: 8.125rem;
   height: 2.75rem;
+  padding: 2rem 8.13rem;
   border: 1px solid red;
   margin-left: 3.563rem;
 `;
@@ -44,8 +46,9 @@ export const Line = styled.div`
 `;
 
 export const PresentationContainer = styled(TextComponent)`
-  width: 22rem;
-  height: 3.2rem;
+  width: 18.3rem;
+  height: 2.25rem;
+  padding: 2.25rem 18.3rem;
   border: 1px solid red;
   margin-left: 5.5rem;
   margin-top: 4.938rem;
@@ -59,6 +62,7 @@ export const ContentWrapper = styled.div`
 export const MainContainer = styled(TextComponent)`
   width: 55rem;
   height: 16rem;
+  padding: 9.5rem 37.3rem;
   border: 1px solid blue;
   text-align: start;
   margin-left: 5.5rem;
@@ -69,17 +73,19 @@ export const MainContainer = styled(TextComponent)`
 export const Image = styled.div`
   width: 29.313rem;
   height: 29.313rem;
+  padding:  29.3125rem 29.3125rem;
   margin-left: 14.438rem;
   flex-shrink: 0;
   border: 1px solid #fff;
 `;
 
 export const SummaryContainer = styled(TextComponent)`
-  width: 50rem;
-  height: 8.188rem;
+  width: 31.4rem;
+  height: 8.19rem;
+  padding: 8.19rem 31.4rem;
   border: 1px solid green;
   text-align: right;
-  margin-top: -11rem;
+  margin-top: -37rem;
   margin-left: 10.438rem;
   flex-shrink: 0;  
 `;
@@ -87,11 +93,11 @@ export const SummaryContainer = styled(TextComponent)`
 export const ContentButton = styled.div`
   display: flex;
   margin-top: 6.5rem;
-  padding: 2.125rem;
 `;
 
 export const Button = styled.button`
 margin-left: 11.063rem;
 width: 11.5rem;
 height: 3.5rem;
+padding: 1.5rem 7.5rem;
 `;

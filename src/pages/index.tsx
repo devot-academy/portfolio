@@ -2,6 +2,7 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from '@/global';
 import { selectTheme } from '@/global/theme'
 import HomeTemplate from '@/components/templates/home';
+import AboutTemplate from '@/components/templates/about';
 
 export default function Home() {
   const theme = selectTheme({
@@ -11,10 +12,10 @@ export default function Home() {
   return (
     <ThemeProvider theme={theme}>
       <HomeTemplate
-        presentation="Oi! Meu nome é Allan"
-        main="REACT DEVELOPER"
-        summary="Tenho 28 anos e nos últimos 12 meses mergulhei de cabeça no mundo do desenvolvimento. Também acumulei valiosa experiência trabalhando em equipe."
-      />
+        presentation="ngjkfngjrnjkgnrjkngk"
+        main=""
+        summary="" logo={''} line={''} image={''} button={''} link={''} />
+      <AboutTemplate about={''} />
       <GlobalStyles />
     </ThemeProvider>
   )
