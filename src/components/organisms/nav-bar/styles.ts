@@ -6,7 +6,6 @@ import ButtonComponent from '@/components/molecules/button';
 export const Container = styled.div`
     display: flex;
     padding: 4rem;
-    border: 1px solid #fff;
 `;
 
 export const AboutButtonComponent = styled(ButtonComponent)`
