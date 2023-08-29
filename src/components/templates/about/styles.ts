@@ -23,11 +23,18 @@ export const HeaderAbout = styled.div`
 `
 export const About = styled(Text)`
   margin: 8rem 20rem;
+  @media (max-width: 414px) {
+    margin: 2rem;
+  }
 `;
 
 export const MyPhotoAbout = styled(Image)`
     margin: 14rem 21rem 21rem 10rem;
     align-items: center;
+    
+  @media (max-width: 414px) {
+    margin: 2rem;
+  }
 `;
 
 export const BodyText= styled.div`
@@ -36,6 +43,10 @@ export const BodyText= styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  @media (max-width: 414px) {
+    flex-direction: column;
+    height: auto;
+  }
 
 
 `;
@@ -47,6 +58,10 @@ export const GroupText = styled.div`
   justify-content: center;
   flex-direction: column;
   margin: 10px 50px 20px 0;
+  @media (max-width: 414px) {
+    width: 100%;
+    margin: 10px 0;
+  }
   
 
 `;
@@ -58,6 +73,13 @@ export const Title = styled(Text)`
 export const MyText = styled(Text)`
   text-align: right;
   margin-block-end: 5rem;
+  text-align: justify;
+
+  @media (max-width: 414px) {
+    text-align: center;
+    margin: 2rem 0;
+    
+  }
   
 `;
 export const Title1 = styled(Text)`
@@ -66,7 +88,16 @@ export const Title1 = styled(Text)`
 
 export const MyText1 = styled(Text)`
   text-align: right;
+  text-align: justify;
+  @media (max-width: 414px) {
+    text-align: center;
+    
+  }
 `;
+
+
+
+
 
 
 
