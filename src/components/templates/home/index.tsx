@@ -4,6 +4,7 @@ import { ImageInterface } from '@/components/atoms/Image/interfaces';
 import { NavbarInterface } from '@/components/organisms/nav-bar/interfaces';
 import { ButtonInterface } from '@/components/molecules/button/interfaces';
 
+
 interface Props {
   LogoProps: ImageInterface;
   NavbarProps: NavbarInterface;
