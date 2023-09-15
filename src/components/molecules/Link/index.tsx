@@ -2,7 +2,7 @@ import React,{ ReactNode }  from "react";
 
 import * as Style from './styles'
 
-import { IText } from '@/components/atoms/text'
+import { IText } from "@/components/atoms/Text"; 
 
 export interface ILink {
     url: string;

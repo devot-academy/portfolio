@@ -9,6 +9,7 @@ export const COLORS: ColorFormat = {
     PRIMARY: '#D2B9B9',
     PRIMARY_DARK: '#7B6C6C',
     LABEL: '#0671E0',
+    NETRAL: '#89939E',
     
     ERROR: '#E74C3C',
     BACKGROUND: '#191B1A',
