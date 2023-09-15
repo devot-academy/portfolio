@@ -1,14 +1,9 @@
-import { text } from 'stream/consumers';
 import styled from 'styled-components';
 import Text from '@/components/atoms/Text';
-import { ImageComponent } from '@/components/atoms/Image/styles';
 import Image from '@/components/atoms/Image';
-import { Body } from '../home/styles';
-
-
 
 export const ContainerAbout = styled.div`
-  background-color: ${({ theme }) => theme.COLORS.NETRAL};
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
   width: 100vw;
   height: 100vh;
 `; 
