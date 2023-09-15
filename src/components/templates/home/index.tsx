@@ -5,14 +5,14 @@ import { NavbarInterface } from '@/components/organisms/nav-bar/interfaces';
 import { ButtonInterface } from '@/components/molecules/button/interfaces';
 
 interface Props {
-  LogoProps: ImageInterface;
-  NavbarProps: NavbarInterface;
-  presentation: string;
-  title: string;
-  description: string;
-  ButtonPrimary: ButtonInterface;
-  ButtonSecondary:  ButtonInterface;
-  MyPhotoProps: ImageInterface;
+  LogoProps?: ImageInterface;
+  NavbarProps?: NavbarInterface;
+  presentation?: string;
+  title?: string;
+  description?: string;
+  ButtonPrimary?: ButtonInterface;
+  ButtonSecondary?:  ButtonInterface;
+  MyPhotoProps?: ImageInterface;
 }
 
 export default function HomeTemplate({ 
@@ -28,14 +28,16 @@ export default function HomeTemplate({
   return (
     <Style.Container>
       <Style.Header>
-        <Style.Logo {...LogoProps} size='medium' />
-        <Style.ContentMenu>
-          <Style.Menu 
-            AboutButtonProps={NavbarProps.AboutButtonProps}
-            ContactButtonProps={NavbarProps.ContactButtonProps}
-            ProjectButtonProps={NavbarProps.ProjectButtonProps}
-            ResumeButtonProps={NavbarProps.ResumeButtonProps} />
-        </Style.ContentMenu>
+        { LogoProps && <Style.Logo {...LogoProps} size='medium' />}
+        { NavbarProps && (
+          <Style.ContentMenu>
+            <Style.Menu 
+              AboutButtonProps={NavbarProps.AboutButtonProps}
+              ContactButtonProps={NavbarProps.ContactButtonProps}
+              ProjectButtonProps={NavbarProps.ProjectButtonProps}
+              ResumeButtonProps={NavbarProps.ResumeButtonProps} />
+          </Style.ContentMenu>
+        )}
       </Style.Header>
       <Style.Body>
         <Style.ContentInfo>
@@ -45,11 +47,11 @@ export default function HomeTemplate({
             <Style.AboutMe type='headline-5' >{description}</Style.AboutMe>
           </Style.ContentPresentation>
           <Style.ContentButton>  
-            <Style.ButtonPrimary {...ButtonPrimary}/>
-            <Style.ButtonSecondary  {...ButtonSecondary} />
+            { ButtonPrimary && <Style.ButtonPrimary {...ButtonPrimary}/>}
+            { ButtonSecondary && <Style.ButtonSecondary  {...ButtonSecondary} />}
           </Style.ContentButton>
         </Style.ContentInfo>
-        <Style.MyPhoto {...MyPhotoProps} isCircle size='large'/>
+        { MyPhotoProps && <Style.MyPhoto {...MyPhotoProps} isCircle size='large'/>}
       </Style.Body>
     </Style.Container>
   );
