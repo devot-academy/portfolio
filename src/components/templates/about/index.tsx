@@ -1,13 +1,15 @@
 import React from 'react';
 import * as Style from './styles';
 
-export interface IAbout {
-  about: string;
+interface Props {
+  About: string;
+  header: string;
 }
 
-export default function AboutTemplate(props: IAbout) {
-  const { } = props;
-
+export default function AboutTemplate({
+  About,
+  header,
+}: Props) {
   return (
     <Style.Container>
       <Style.About type='headline-3'>

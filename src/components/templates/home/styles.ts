@@ -1,103 +1,125 @@
 import styled from 'styled-components';
-import TextComponent from '@/components/atoms/Text';
+import Image from '@/components/atoms/Image';
+import Text from '@/components/atoms/Text';
+
+import Button from '@/components/molecules/button';
+import Navbar from '@/components/organisms/nav-bar';
 
 export const Container = styled.div`
-  background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
+  background-color: ${({ theme }) => theme.COLORS.ACCENTED};
   width: 100vw;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
+
+  /* Media Query para iPhones modernos em orientação retrato */
+  @media only screen and (max-device-width: 750px) and (orientation: portrait) {
+    height: auto;
+    width: 122vw;
+  }
 `;
 
-export const ContentNav = styled.div`
+export const Header = styled.div`
+  width: 100%;
+  height: 20%;
   display: flex;
-  border: 1px solid red;
+  justify-content: space-between;
   align-items: center;
+
+  /* Media Query para iPhones modernos em orientação retrato */
+  @media only screen and (max-device-width: 750px) and (orientation: portrait) {
+    flex-direction: column;
+    height: auto;
+  }
 `;
 
-export const Logo = styled.div`
-  margin-top: 2.875rem;
-  margin-left: 4.813rem;
-  margin-right: 33.938rem;
-  width: 16.438rem;
-  height: 7.063rem;
-  padding: 7.06rem 16.4rem;
-  flex-shrink: 0;
-  border: 1px solid red;
+export const Logo = styled(Image)`
+  margin: 2rem 3rem;
+
+  /* Media Query para iPhones modernos em orientação retrato */
+  @media only screen and (max-device-width: 750px) and (orientation: portrait) {
+    margin: 1rem 1.5rem;
+  }
 `;
 
-export const Link = styled.div`
-  width: 8.125rem;
-  height: 2.75rem;
-  padding: 2rem 8.13rem;
-  border: 1px solid red;
-  margin-left: 3.563rem;
+export const ContentMenu = styled.div`
+  margin-right: 3rem;
+
+  /* Media Query para iPhones modernos em orientação retrato */
+  @media only screen and (max-device-width: 750px) and (orientation: portrait) {
+    margin-right: 1.5rem;
+  }
 `;
 
-export const Line = styled.div`
-  width: 91px;
-  height: 0px;
-  margin-top: 16rem;
-  margin-left: 36.188rem;
-  flex-shrink: 0;
-  stroke-width: 5px;
-  stroke: #fff;
-`;
+export const Menu = styled(Navbar)``;
 
-export const PresentationContainer = styled(TextComponent)`
-  width: 18.3rem;
-  height: 2.25rem;
-  padding: 2.25rem 18.3rem;
-  border: 1px solid red;
-  margin-left: 5.5rem;
-  margin-top: 4.938rem;
-`;
-
-export const ContentWrapper = styled.div`
+export const Body = styled.div`
+  width: 100%;
+  height: 80%;
   display: flex;
-  margin-top: 0.688rem;
+  align-items: center;
+  justify-content: space-evenly;
+
+  /* Media Query para iPhones modernos em orientação retrato */
+  @media only screen and (max-device-width: 750px) and (orientation: portrait) {
+    flex-direction: column;
+  }
 `;
 
-export const MainContainer = styled(TextComponent)`
-  width: 55rem;
-  height: 16rem;
-  padding: 9.5rem 37.3rem;
-  border: 1px solid blue;
-  text-align: start;
-  margin-left: 5.5rem;
-  margin-top: 0.688rem;
-  flex-shrink: 0;
+export const ContentInfo = styled.div`
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  /* Media Query para iPhones modernos em orientação retrato */
+  @media only screen and (max-device-width: 750px) and (orientation: portrait) {
+    width: 80%;
+    align-items: flex-start;
+  }
 `;
 
-export const Image = styled.div`
-  width: 29.313rem;
-  height: 29.313rem;
-  padding:  29.3125rem 29.3125rem;
-  margin-left: 14.438rem;
-  flex-shrink: 0;
-  border: 1px solid #fff;
+export const ContentPresentation = styled.div`
+  margin-bottom: 6rem;
+
+  /* Media Query para iPhones modernos em orientação retrato */
+  @media only screen and (max-device-width: 750px) and (orientation: portrait) {
+    margin-bottom: 3rem;
+  }
 `;
 
-export const SummaryContainer = styled(TextComponent)`
-  width: 31.4rem;
-  height: 8.19rem;
-  padding: 8.19rem 31.4rem;
-  border: 1px solid green;
+export const Presentation = styled(Text)``;
+export const Title = styled(Text)`
+  text-transform: uppercase;
+`;
+export const AboutMe = styled(Text)`
   text-align: right;
-  margin-top: -37rem;
-  margin-left: 10.438rem;
-  flex-shrink: 0;  
 `;
 
 export const ContentButton = styled.div`
   display: flex;
-  margin-top: 6.5rem;
+  margin-top: 2rem;
+
+  /* Media Query para iPhones modernos em orientação retrato */
+  @media only screen and (max-device-width: 750px) and (orientation: portrait) {
+    margin-top: 1rem;
+  }
 `;
 
-export const Button = styled.button`
-margin-left: 11.063rem;
-width: 11.5rem;
-height: 3.5rem;
-padding: 1.5rem 7.5rem;
+export const ButtonPrimary = styled(Button)`
+  margin-right: 2rem;
+
+  /* Media Query para iPhones modernos em orientação retrato */
+  @media only screen and (max-device-width: 750px) and (orientation: portrait) {
+    margin-right: 1rem;
+  }
+`;
+
+export const ButtonSecondary = styled(Button)``;
+
+export const MyPhoto = styled(Image)`
+  /* Media Query para iPhones modernos em orientação retrato */
+  @media only screen and (max-device-width: 750px) and (orientation: portrait) {
+    width: 80%;
+  }
 `;
