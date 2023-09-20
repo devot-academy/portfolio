@@ -5,39 +5,37 @@ import { NavbarInterface } from '@/components/organisms/nav-bar/interfaces';
 import { ButtonInterface } from '@/components/molecules/button/interfaces';
 
 interface Props {
-  LogoProps?: ImageInterface;
-  NavbarProps?: NavbarInterface;
-  presentation?: string;
-  title?: string;
-  description?: string;
-  ButtonPrimary?: ButtonInterface;
-  ButtonSecondary?:  ButtonInterface;
-  MyPhotoProps?: ImageInterface;
+  LogoProps: ImageInterface;
+  NavbarProps: NavbarInterface;
+  presentation: string;
+  title: string;
+  description: string;
+  ButtonPrimary: ButtonInterface;
+  ButtonSecondary: ButtonInterface;
+  MyPhotoProps: ImageInterface;
 }
 
-export default function HomeTemplate({ 
-    LogoProps,
-    NavbarProps,
-    presentation,
-    title,
-    description,
-    ButtonPrimary,
-    ButtonSecondary,
-    MyPhotoProps,
-  }: Props){
+export default function HomeTemplate({
+  LogoProps,
+  NavbarProps,
+  presentation,
+  title,
+  description,
+  ButtonPrimary,
+  ButtonSecondary,
+  MyPhotoProps,
+}: Props) {
   return (
     <Style.Container>
       <Style.Header>
-        { LogoProps && <Style.Logo {...LogoProps} size='medium' />}
-        { NavbarProps && (
-          <Style.ContentMenu>
-            <Style.Menu 
-              AboutButtonProps={NavbarProps.AboutButtonProps}
-              ContactButtonProps={NavbarProps.ContactButtonProps}
-              ProjectButtonProps={NavbarProps.ProjectButtonProps}
-              ResumeButtonProps={NavbarProps.ResumeButtonProps} />
-          </Style.ContentMenu>
-        )}
+        <Style.Logo {...LogoProps} size='medium' />
+        <Style.ContentMenu>
+          <Style.Menu
+            AboutButtonProps={NavbarProps?.AboutButtonProps}
+            ContactButtonProps={NavbarProps?.ContactButtonProps}
+            ProjectButtonProps={NavbarProps?.ProjectButtonProps}
+            ResumeButtonProps={NavbarProps?.ResumeButtonProps} />
+        </Style.ContentMenu>
       </Style.Header>
       <Style.Body>
         <Style.ContentInfo>
@@ -46,12 +44,12 @@ export default function HomeTemplate({
             <Style.Title type='headline-1'>{title}</Style.Title>
             <Style.AboutMe type='headline-5' >{description}</Style.AboutMe>
           </Style.ContentPresentation>
-          <Style.ContentButton>  
-            { ButtonPrimary && <Style.ButtonPrimary {...ButtonPrimary}/>}
-            { ButtonSecondary && <Style.ButtonSecondary  {...ButtonSecondary} />}
+          <Style.ContentButton>
+            <Style.ButtonPrimary {...ButtonPrimary} />
+            <Style.ButtonSecondary  {...ButtonSecondary} />
           </Style.ContentButton>
         </Style.ContentInfo>
-        { MyPhotoProps && <Style.MyPhoto {...MyPhotoProps} isCircle size='large'/>}
+        <Style.MyPhoto {...MyPhotoProps} isCircle size='large' />
       </Style.Body>
     </Style.Container>
   );

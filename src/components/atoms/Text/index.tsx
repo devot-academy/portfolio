@@ -8,9 +8,9 @@ import { ColorFormat } from '@/global/theme/colors/interfaces';
 export interface IText {
     type: keyof typeof typeMapper;
     color?: keyof ColorFormat;
-    children: ReactNode;
+    children: React.ReactNode;
 }
 
-export default function Text (props: IText) {
+export default function Text(props: IText) {
     return <Style.TextComponent {...props} />
 }
