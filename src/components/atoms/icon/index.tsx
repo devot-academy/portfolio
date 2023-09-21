@@ -1,9 +1,19 @@
+import React from 'react';
 import { IconType } from 'react-icons';
-import { IconInterface } from './interfaces';
-import { StyledIcon } from './styles';
+import { IconColor, IconSize, StyledIcon } from './styles';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 
-const icons: { [key: string]: IconType } = {
+// Defina um tipo de união para as opções válidas de 'name'
+type IconName = 'email' | 'phone' | 'location' | 'linkedin' | 'github' | 'instagram';
+
+// Interface para as props do componente Icon
+export interface IconProps {
+  name: IconName;
+  size: keyof typeof IconSize;
+  color: keyof typeof IconColor;
+}
+
+const icons: { [key in IconName]: IconType } = {
   email: FaEnvelope,
   phone: FaPhone,
   location: FaMapMarkerAlt,
@@ -12,14 +22,14 @@ const icons: { [key: string]: IconType } = {
   instagram: FaInstagram
 };
 
-const Icon = ({ name, ...props }: IconInterface) => {
-  const Icon = icons[name];
+const Icon: React.FC<IconProps> = ({ name, ...props }) => {
+  const IconComponent = icons[name];
 
-  if (!Icon) return null;
+  if (!IconComponent) return null;
 
   return (
     <StyledIcon name={name} {...props}>
-      <Icon />
+      <IconComponent />
     </StyledIcon>
   );
 };
