@@ -4,7 +4,7 @@ import { selectTheme } from '@/global/theme'
 import HomeTemplate from '@/components/templates/home';
 import AboutTemplate from '@/components/templates/about';
 
-import * as PROFILE_RAISSA from '@/profile-data/raissa'
+import * as PROFILE_ALEFE from '@/profile-data/alefe'
 
 
 export default function Home() {
@@ -15,8 +15,8 @@ export default function Home() {
 
   return (
     <ThemeProvider theme={theme}>
-      <HomeTemplate />
-      <AboutTemplate {...PROFILE_RAISSA.ABOUT_PROPS}/>
+      <HomeTemplate {...PROFILE_ALEFE.HOME_PROPS}/>
+      <AboutTemplate {...PROFILE_ALEFE.ABOUT_PROPS}/>
       <GlobalStyles /> 
     </ThemeProvider>
   )
