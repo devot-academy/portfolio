@@ -6,6 +6,11 @@ export const ContainerAbout = styled.div`
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
   width: 100vw;
   height: 100vh;
+  /* Media Query para iPhones modernos em orientação retrato */
+  @media only screen and (max-device-width: 750px) and (orientation: portrait) {
+    height: auto;
+    width: 122vw;
+  }
 `; 
 
 export const HeaderAbout = styled.div`
@@ -14,22 +19,27 @@ export const HeaderAbout = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;  
-
+ /* Media Query para iPhones modernos em orientação retrato */
+ @media only screen and (max-device-width: 750px) and (orientation: portrait) {
+    flex-direction: column;
+    height: auto;
+  }
 `
 export const About = styled(Text)`
   margin: 8rem 20rem;
-  @media (max-width: 414px) {
-    margin: 2rem;
-  }
+
+ 
 `;
 
 export const MyPhotoAbout = styled(Image)`
     margin: 14rem 21rem 21rem 10rem;
     align-items: center;
-    
-  @media (max-width: 414px) {
-    margin: 2rem;
+    /* Media Query para iPhones modernos em orientação retrato */
+  @media only screen and (max-device-width: 750px) and (orientation: portrait) {
+    margin: 1rem 1.5rem;
   }
+    
+ 
 `;
 
 export const BodyText= styled.div`
@@ -38,12 +48,10 @@ export const BodyText= styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  @media (max-width: 414px) {
-    flex-direction: column;
-    height: auto;
+ /* Media Query para iPhones modernos em orientação retrato */
+ @media only screen and (max-device-width: 750px) and (orientation: portrait) {
+    margin-right: 1.5rem;
   }
-
-
 `;
 export const GroupText = styled.div`
   width: 40%;
@@ -53,15 +61,19 @@ export const GroupText = styled.div`
   justify-content: center;
   flex-direction: column;
   margin: 10px 50px 20px 0;
-  @media (max-width: 414px) {
-    width: 100%;
-    margin: 10px 0;
+   /* Media Query para iPhones modernos em orientação retrato */
+   @media only screen and (max-device-width: 750px) and (orientation: portrait) {
+    flex-direction: column;
   }
-  
 
 `;
 export const Title = styled(Text)`
   margin: 0.2rem 0.1rem;
+  /* Media Query para iPhones modernos em orientação retrato */
+  @media only screen and (max-device-width: 750px) and (orientation: portrait) {
+    margin-bottom: 3rem;
+  }
+ 
 
 `;
 
@@ -69,12 +81,6 @@ export const MyText = styled(Text)`
   text-align: right;
   margin-block-end: 5rem;
   text-align: justify;
-
-  @media (max-width: 414px) {
-    text-align: center;
-    margin: 2rem 0;
-    
-  }
   
 `;
 export const Title1 = styled(Text)`
@@ -84,10 +90,7 @@ export const Title1 = styled(Text)`
 export const MyText1 = styled(Text)`
   text-align: right;
   text-align: justify;
-  @media (max-width: 414px) {
-    text-align: center;
-    
-  }
+
 `;
 
 
